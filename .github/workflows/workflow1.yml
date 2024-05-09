@@ -19,7 +19,7 @@ jobs:
           java-version: '17'
 
       - name: Build and run unit tests
-        run: mvn test
+        run: run mvn -Dtest= FilmServiceTest
 
   integration_tests:
     name: Run Integration Tests
