@@ -1,13 +1,15 @@
-name: Continuous Integration - Non-Main Branches
+name: Continuous integration - Workflow1
 
 on:
   push:
+    branches:
+      - '**'
     branches-ignore:
-      - 'main'  
+      - 'main'
 
 jobs:
   test:
-    name: Run Tests
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     
     steps:
@@ -19,16 +21,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Cache Maven packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-m2
-
       - name: Run unit tests
-        run: mvn test -Dtest=FilmServiceUnitTest 
-        
+        run: mvn test -Dtest=FilmServiceTest
+
       - name: Run integration tests
-        run: mvn test -Dtest=FilmServiceIntegrationTest 
+        run: mvn test -Dtest=FilmServiceUnitaryTest
