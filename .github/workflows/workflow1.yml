@@ -3,8 +3,7 @@ name: Continuous integration - Workflow1
 on:
   push:
     branches:
-      - '**'
-      - '!main'
+      - 'wf1TestBranch'
 
 jobs:
   test:
