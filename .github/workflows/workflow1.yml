@@ -19,8 +19,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Run unit tests
-        run: mvn test -Dtest=FilmServiceTest
-
-      - name: Run integration tests
+      - name: Run unit test
         run: mvn test -Dtest=FilmServiceUnitaryTest
+
+      - name: Run unit test 2
+        run: mvn test -Dtest=FilmServiceTest
+        
+      - name: Run integration test
+        run: mvn test -Dtest=UrlUtilsIntegrationTest
+
+      - name: Run integration test 2
+        run: mvn test -Dtest=UrlUtilsTest
