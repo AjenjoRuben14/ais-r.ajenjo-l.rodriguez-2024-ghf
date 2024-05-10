@@ -2,8 +2,6 @@ name: Continuous integration - Workflow1
 
 on:
   push:
-    branches-ignore:
-      - 'main'
 
 jobs:
   test:
