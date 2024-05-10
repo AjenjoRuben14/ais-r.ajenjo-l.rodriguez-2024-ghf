@@ -22,5 +22,18 @@ jobs:
 
       - name: Run integration test 2
         run: mvn test -Dtest=UrlUtilsIntegrationTest
+        
+      - name: Run unit test
+        run: mvn test -Dtest=FilmServiceTest
 
+      - name: Run unit test 2
+        run: mvn test -Dtest=FilmServiceUnitaryTest
+        
+      - name: Run system test
+        run: mvn test -Dtest=BugTest
 
+      - name: Run system test 2
+        run: mvn test -Dtest=FilmUITest
+
+      - name: Run system test 3
+        run: mvn test -Dtest=SeleniumTest
