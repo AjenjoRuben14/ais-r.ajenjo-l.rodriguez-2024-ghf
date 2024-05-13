@@ -1,0 +1,28 @@
+name: Continuous integration - Workflow4
+
+on:
+  schedule:
+    - cron: '38 0 * * *' # Se ejecuta a la medianoche todos los días
+
+permissions:
+  id-token: write
+  contents: read
+    
+jobs:
+  system-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        browser: [chrome, edge, safari]
+        
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+           distribution: 'temurin'
+           java-version: ${{ matrix.java }}
+
+      - name: Run system test
+        run: mvn test -Dtest=FilmUITest
