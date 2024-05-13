@@ -53,6 +53,6 @@ jobs:
       steps:
         - name: 'Run Smoke Test'
           run: |
-            mvn -Dhost=ais-nitflex2.westeurope.azurecontainer.io test
+            mvn -Dhost=ais-nitflex2.westeurope.azurecontainer.io test -Dtest=SmokeTest
   
   
