@@ -31,6 +31,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Register Azure Container Instance provider
+        run: az provider register --namespace Microsoft.ContainerInstance
+        env:
+          AZURE_SERVICE_PRINCIPAL_ID: ${{ secrets.AZURE_SERVICE_PRINCIPAL_ID }}
+          AZURE_SERVICE_PRINCIPAL_PASSWORD: ${{ secrets.AZURE_SERVICE_PRINCIPAL_PASSWORD }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          
       - name: 'Az CLI login'
         uses: azure/login@v2
         with:
