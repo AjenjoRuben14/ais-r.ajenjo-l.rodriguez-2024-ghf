@@ -44,7 +44,7 @@ jobs:
             --resource-group ${{ secrets.AZURE_GROUP }} \
             --name nitflex \
             --image ${{ secrets.DOCKERHUB_USERNAME }}/nitflex:latest \
-            --dns-name-label ais-nitflex \
+            --dns-name-label ais-nitflex-wf3 \
             --ports 8080
 
   
