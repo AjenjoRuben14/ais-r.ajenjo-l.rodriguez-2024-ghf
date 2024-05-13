@@ -43,8 +43,8 @@ jobs:
             az container create \
             --resource-group ${{ secrets.AZURE_GROUP }} \
             --name nitflex \
-            --image ${{ secrets.DOCKERHUB_USERNAME }}/nitflex:latest \
-            --dns-name-label ais-nitflex-wf3 \
+            --image ${{ secrets.DOCKERHUB_USERNAME }}/nitflex:${{ github.sha }}
+            --dns-name-label ais-nitflex \
             --ports 8080
 
   
