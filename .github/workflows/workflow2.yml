@@ -1,4 +1,4 @@
-name: Pre-Merge Integration Tests
+name: Continuous integration - Workflow2
 
 on:
   pull_request:
