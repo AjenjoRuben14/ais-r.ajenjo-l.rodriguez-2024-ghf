@@ -16,12 +16,13 @@ import java.time.Duration;
 
 public class SmokeTest {
 
-    private static String host;
+    private String host;
     private WebDriver driver;
     private WebDriverWait wait;
 
     @BeforeEach
     public void setupTest() {
+        this.host = System.getProperty("host");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         this.driver = new ChromeDriver(options);
@@ -37,7 +38,7 @@ public class SmokeTest {
 
     @Test
     public void testWelcomeMessage() throws IOException {
-        URL url = new URL(host);
+        URL url = new URL(this.host);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
 
