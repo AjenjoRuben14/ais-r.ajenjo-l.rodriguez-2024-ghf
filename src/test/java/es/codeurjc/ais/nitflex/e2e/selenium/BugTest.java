@@ -26,8 +26,10 @@ public class BugTest {
 
     @BeforeEach
     public void setupTest() {
-        driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--headless");
+        this.driver = new ChromeDriver(options);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(2));
     }
 
     @AfterEach
