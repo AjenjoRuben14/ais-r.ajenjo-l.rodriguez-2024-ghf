@@ -2,7 +2,7 @@ package es.codeurjc.ais.nitflex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-// test
+// test 2
 @SpringBootApplication
 public class Application {
 
