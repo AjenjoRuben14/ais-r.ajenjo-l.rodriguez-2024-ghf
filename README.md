@@ -1,6 +1,6 @@
 # AIS-Practicas-4y5-2024
 
-Autor(es): Ruben Ajenjo Roig 
+Autor(es): Ruben Ajenjo Roig, Lucas Rodríguez Díez
 
 [Repositorio](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf.git)
 
@@ -38,6 +38,29 @@ Nos sale error debido a que los test de sistema implementados por nosotros en la
 
 
 ### Tercer Workflow
+En este caso el workflow queda de la siguiente manera:
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/ab210fae-0d63-4efb-9d26-c78259829389)
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/024386ba-3f65-4f63-8d1d-7f6c363b7830)
+
+El workflow tiene 3 jobs diferentes. El primer de ellos crea la imagen de Docker, el segundo despliega la aplicación en Azure y el tercero ejecuta el SmokeTest, previamente configurado
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/efd85b27-6fbd-46df-a1c7-3abb94dc3b7e)
+
+Como podemos apreciar los 3 jobs han funcionado correctamente y se ha ejecutado el SmokeTest
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/a514751e-fc4a-4d30-8385-4c8e1b365e19)
+
+
+
+
+
+
+
+
+
+
+
 ### Cuarto Workflow
 
 ## Desarrollo con GitHubFlow (Práctica 5)
