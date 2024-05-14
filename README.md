@@ -26,6 +26,7 @@ Si hacemos click sobre el workflow podemos apreciar como el job Run test se ha e
 ### Segundo Workflow
 En este caso el workflow se ejecutará cuando realicemos un pull reques. Nuestro workflow queda de la siguiente forma
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/2ea0591f-5d19-4678-9978-bb6e4023a0a1)
+
 Ahora realizamos el pull request y se debería de ejecutar el workflow numero 2
 
 ### Tercer Workflow
