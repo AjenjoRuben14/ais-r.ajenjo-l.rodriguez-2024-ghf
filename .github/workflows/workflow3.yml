@@ -59,7 +59,7 @@ jobs:
             java-version: '17'
         - name: Run Smoke Test
           run: |
-            mvn test -Dhost=ais-nitflex2.westeurope.azurecontainer.io test -Dtest=SmokeTest
+            mvn test -Dhost=http://ais-nitflex2.westeurope.azurecontainer.io:8080 -Dtest=SmokeTest
 
 
 
