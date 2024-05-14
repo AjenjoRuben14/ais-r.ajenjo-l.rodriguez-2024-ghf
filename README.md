@@ -6,6 +6,9 @@ Autor(es): Ruben Ajenjo Roig, Lucas Rodríguez Díez
 
 [Aplicación Azure](http://ais-nitflex2.westeurope.azurecontainer.io:8080/)
 
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/114026662/ca359eb6-03f1-4ad0-b6af-63b1f6ceb2b7)
+
+
 ## Memoria Practica 4
 ### Primer Workflow
 En primer lugar programamos el workflow que queda de la siguiente manera:
@@ -32,7 +35,7 @@ Ahora realizamos el pull request y se debería de ejecutar el workflow numero 2
 
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/ba0f009a-75e1-496b-8410-92de424e2809)
 
-Nos sale error debido a que los test de sistema implementados por nosotros en las prácticas anteriores fallan, sin embargo tanto el test de sistema que viene predefinido en el repositorio funciona correctamente como se puede apreciar en la siguiente imagen:
+Nos sale error debido a que los test de sistema implementados por nosotros en las prácticas anteriores fallan, sin embargo el test de sistema que viene predefinido en el repositorio funciona correctamente como se puede apreciar en la siguiente imagen:
 
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/d627bf8b-8fa3-45ed-9f65-37d103d6d99e)
 
@@ -52,32 +55,17 @@ Como podemos apreciar los 3 jobs han funcionado correctamente y se ha ejecutado 
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/a514751e-fc4a-4d30-8385-4c8e1b365e19)
 
 
-
-
-
-
-
-
-
-
-
 ### Cuarto Workflow
-Dada la compatibilidad de los navegadores con los sitemas operativos se han ejecutado todas las posibles combinaciones de ambas matrices
+Dada la compatibilidad de los navegadores con los sitemas operativos se han ejecutado todas las posibles combinaciones de ambas matrices.
 
-![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/0801b9b5-fec7-4f47-a3eb-ee0be7d463e5)
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/114026662/b8102fdf-ac77-4199-bdef-2413b7cc9f0c)
+
+El workflow se ejecuta cada noche a las 02:00 UTC, es decir, a las 00:00 hora local.
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/114026662/600ab62d-b5d8-43ad-affa-0ef869d21304)
+
+Se aprecia que se ejecuta FilmUITest correctamente en cada una de las ocasiones.
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/114026662/6be1ab88-82a2-4246-8832-f20c91712643)
 
 
-Una vez realizado el workflow realizamos un 
-
-
-## Desarrollo con GitHubFlow (Práctica 5)
-
-Una vez creados los workflows y funcionando estos, pasamos a crear la nueva funcionalidad utilizando GithubFlow:
-
-Clonamos el repositorio
-
-```
-$ git clone ...
-....
-
-Ejemplo de un enlace en Markdown: [Workflow 1](https://github.com/URJC-AIS/continuous-deployment-azure/actions/runs/8746724116)
