@@ -9,7 +9,7 @@ Autor(es): Ruben Ajenjo Roig
 ## Memoria Practica 4
 ### Primer Workflow
 En primer lugar programamos el workflow que queda de la siguiente manera:
-![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/744f2588-a974-4376-9f50-4aa07f1f544f)
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/41f8bc7b-1d97-4b1c-8de3-04ded4f4254c)
 
 
 En segundo lugar es necesario crearnos otra rama distinta a la main desde la cual realizaremos commits y deberán ejecutarse las pruebas unitarias y de integración. Esta rama se llamará test-branch.
