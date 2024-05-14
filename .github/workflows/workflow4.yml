@@ -27,26 +27,27 @@ jobs:
 
       - name: Run system test
         run: |
-          if [[ ${{ matrix.os }} == 'ubuntu-latest' ]]; then
-            if [[ ${{ matrix.browser }} == 'chrome' ]]; then
+          if (${{ matrix.os }} -eq 'ubuntu-latest') {
+            if (${{ matrix.browser }} -eq 'chrome') {
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-          fi
+            }
+          }
           
-          if [[ ${{ matrix.os }} == 'windows-latest' ]]; then
-            if [[ ${{ matrix.browser }} == 'chrome' ]]; then
+          if (${{ matrix.os }} -eq 'windows-latest') {
+            if (${{ matrix.browser }} -eq 'chrome') {
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-            if [[ ${{ matrix.browser }} == 'edge' ]]; then
+            }
+            if (${{ matrix.browser }} -eq 'edge') {
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-          fi
+            }
+          }
           
-          if [[ ${{ matrix.os }} == 'macos-latest' ]]; then
-            if [[ ${{ matrix.browser }} == 'chrome' ]]; then
+          if (${{ matrix.os }} -eq 'macos-latest') {
+            if (${{ matrix.browser }} -eq 'chrome') {
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-            if [[ ${{ matrix.browser }} == 'safari' ]]; then
+            }
+            if (${{ matrix.browser }} -eq 'safari') {
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-          fi
+            }
+          }
+
