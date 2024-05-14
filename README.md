@@ -9,6 +9,7 @@ Autor(es): Ruben Ajenjo Roig
 ## Memoria Practica 4
 ### Primer Workflow
 En primer lugar programamos el workflow que queda de la siguiente manera:
+
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/41f8bc7b-1d97-4b1c-8de3-04ded4f4254c)
 
 
@@ -19,15 +20,22 @@ En segundo lugar es necesario crearnos otra rama distinta a la main desde la cua
 Como se puede apreciar al haber una cambio y hacer commit en la rama test-branch (en este caso en application.java) automaticamente se ejecuta el workflow con todos los tests
 
 Si hacemos click sobre el workflow podemos apreciar como el job Run test se ha ejecutado correctamente
+
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/d6afff1d-000d-4edb-9a1e-5f2b8d54d94d)
 
-
-
 ### Segundo Workflow
-En este caso el workflow se ejecutará cuando realicemos un pull reques. Nuestro workflow queda de la siguiente forma
+En este caso el workflow se ejecutará cuando realicemos un pull reques. Nuestro workflow queda de la siguiente forma:
+
 ![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/2ea0591f-5d19-4678-9978-bb6e4023a0a1)
 
 Ahora realizamos el pull request y se debería de ejecutar el workflow numero 2
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/ba0f009a-75e1-496b-8410-92de424e2809)
+
+Nos sale error debido a que los test de sistema implementados por nosotros en las prácticas anteriores fallan, sin embargo tanto el test de sistema que viene predefinido en el repositorio funciona correctamente como se puede apreciar en la siguiente imagen:
+
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/d627bf8b-8fa3-45ed-9f65-37d103d6d99e)
+
 
 ### Tercer Workflow
 ### Cuarto Workflow
