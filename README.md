@@ -8,7 +8,8 @@ Autor(es): Ruben Ajenjo Roig
 
 ## Memoria Practica 4
 ### Primer Workflow
-En primer lugar es necesario crearnos otra rama distinta a la main desde la cual realizaremos commits y deberán ejecutarse las pruebas unitarias y de integración. Esta rama se llamará test-branch
+En primer lugar es necesario crearnos otra rama distinta a la main desde la cual realizaremos commits y deberán ejecutarse las pruebas unitarias y de integración. Esta rama se llamará test-branch.
+Una vez creado modificamos cualquier archivo de la rama y en el main debería de ejecutarse el primer worflow llamado workflow1.yml
 ### Segundo Workflow
 ### Tercer Workflow
 ### Cuarto Workflow
