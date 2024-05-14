@@ -27,17 +27,14 @@ jobs:
 
       - name: Run system test
         run: |
-          if [ "${{ matrix.browser }}" == 'chrome' ]; then
+          if ${{ matrix.os }} == 'windows-latest' ; then
+            if ${{ matrix.browser }} == 'edge' ; then
+              mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
+            fi
+          elif ${{ matrix.os }} == 'macos-latest' ; then
+            if ${{ matrix.browser }} == 'safari' ; then
+              mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
+            fi
+          else
             mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-          elif [ "${{ matrix.browser }}" == 'edge' ]; then
-            if [ "${{ matrix.os }}" == 'windows-latest' ]; then
-              mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
-          elif [ "${{ matrix.browser }}" == 'safari' ]; then
-            if [ "${{ matrix.os }}" == 'macos-latest' ]; then
-              mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
           fi
-
-
-
