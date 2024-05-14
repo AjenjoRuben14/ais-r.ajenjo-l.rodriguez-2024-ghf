@@ -1,8 +1,9 @@
 name: Continuous integration - Workflow4
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Se ejecuta a la medianoche todos los días
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write
@@ -13,8 +14,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        browser: [chrome, edge, safari]
+        os: [ubuntu-latest]
+        browser: [chrome]
         
     steps:
       - uses: actions/checkout@v4
