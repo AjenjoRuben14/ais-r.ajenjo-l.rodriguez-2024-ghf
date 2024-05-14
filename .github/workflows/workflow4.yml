@@ -1,9 +1,8 @@
 name: Continuous integration - Workflow4
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+      - cron: '0 2 * * *'
 
 permissions:
   id-token: write
