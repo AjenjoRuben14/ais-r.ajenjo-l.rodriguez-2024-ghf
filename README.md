@@ -18,6 +18,10 @@ En segundo lugar es necesario crearnos otra rama distinta a la main desde la cua
 
 Como se puede apreciar al haber una cambio y hacer commit en la rama test-branch (en este caso en application.java) automaticamente se ejecuta el workflow con todos los tests
 
+Si hacemos click sobre el workflow podemos apreciar como el job Run test se ha ejecutado correctamente
+![image](https://github.com/AjenjoRuben14/ais-r.ajenjo-l.rodriguez-2024-ghf/assets/67601117/d6afff1d-000d-4edb-9a1e-5f2b8d54d94d)
+
+
 
 ### Segundo Workflow
 ### Tercer Workflow
