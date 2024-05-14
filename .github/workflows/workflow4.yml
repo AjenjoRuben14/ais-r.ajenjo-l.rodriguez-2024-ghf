@@ -29,8 +29,6 @@ jobs:
           if ${{ matrix.browser }} == 'chrome' ; then
             mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
           elif ${{ matrix.browser }} == 'safari' ; then
-            if ${{ matrix.os }} == 'macos-latest' ; then
               mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
-            fi
           fi
 
