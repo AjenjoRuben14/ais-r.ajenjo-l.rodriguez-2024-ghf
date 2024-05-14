@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        browser: [chrome, safari]
+        browser: [chrome, edge, safari]
         
     steps:
       - uses: actions/checkout@v4
