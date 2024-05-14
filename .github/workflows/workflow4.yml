@@ -14,8 +14,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        browser: [chrome]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        browser: [chrome, edge, safari]
         
     steps:
       - uses: actions/checkout@v4
@@ -26,4 +26,13 @@ jobs:
            java-version: '17'
 
       - name: Run system test
-        run: mvn test -Dtest=FilmUITest
+        run: |
+          if [[ ${{ matrix.os }} == 'ubuntu-latest' && ${{ matrix.browser }} == 'chrome' ]]; then
+            mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
+          fi
+          if [[ ${{ matrix.os }} == 'windows-latest' && ${{ matrix.browser }} == 'edge' ]]; then
+            mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
+          fi
+          if [[ ${{ matrix.os }} == 'macos-latest' && ${{ matrix.browser }} == 'safari' ]]; then
+            mvn test -Dtest=FilmUITest -Dos=${{ matrix.os }} -Dbrowser=${{ matrix.browser }}
+          fi
